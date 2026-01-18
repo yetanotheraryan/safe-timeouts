@@ -1,6 +1,6 @@
 {
   "name": "safe-timeouts",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Deadline-based timeouts for async code in Node.js. Enforce end-to-end execution deadlines with automatic propagation and AbortSignal support.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

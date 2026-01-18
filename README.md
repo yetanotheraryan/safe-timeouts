@@ -10,7 +10,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/yetanotheraryan/safe-timeouts)
 ![GitHub License](https://img.shields.io/github/license/yetanotheraryan/safe-timeouts)
 
-Promise-based deadline enforcement for async code in Node.js. `safe-timeout` helps you apply a **single execution deadline** across async functions, services, and external calls using standard `AbortSignal` semantics.
+Promise-based deadline enforcement for async code in Node.js. `safe-timeouts` helps you apply a **single execution deadline** across async functions, services, and external calls using standard `AbortSignal` semantics.
 
 ---
 
@@ -28,14 +28,14 @@ Most timeout utilities fail here because they:
 * don’t compose across nested calls
 * don’t integrate with `AbortSignal`
 
-`safe-timeout` solves this correctly.
+`safe-timeouts` solves this correctly.
 
 ---
 
 ## Installation
 
 ```bash
-npm install safe-timeout
+npm install safe-timeouts
 ```
 
 Node.js >= 16 is required.
@@ -45,7 +45,7 @@ Node.js >= 16 is required.
 ## Basic usage
 
 ```ts
-import { withTimeout, TimeoutError } from "safe-timeout";
+import { withTimeout, TimeoutError } from "safe-timeouts";
 import axios from "axios";
 
 try {
@@ -161,7 +161,7 @@ These **cannot be forcibly stopped**:
 * CPU-bound loops
 * legacy libraries
 
-For these, `safe-timeout`:
+For these, `safe-timeouts`:
 
 * stops waiting
 * rejects the outer promise
@@ -175,7 +175,7 @@ JavaScript cannot forcibly stop non-abort-aware operations (like `setTimeout`, S
 
 When such operations exceed the deadline:
 
-* `safe-timeout` rejects the outer promise
+* `safe-timeouts` rejects the outer promise
 * abort-aware APIs are cancelled automatically
 * JavaScript execution resumes only when the pending operation completes
 
@@ -190,11 +190,11 @@ This design avoids hidden global checks while remaining honest about JavaScript 
 
 ## Axios integration
 
-`safe-timeout` works with Axios by passing the provided `AbortSignal` to the request.
+`safe-timeouts` works with Axios by passing the provided `AbortSignal` to the request.
 
 ```ts
 import axios from "axios";
-import { withTimeout } from "safe-timeout";
+import { withTimeout } from "safe-timeouts";
 
 await withTimeout(2000, async (signal) => {
   const res = await axios.get("/users", { signal });
@@ -211,7 +211,7 @@ This explicit integration keeps cancellation predictable and avoids hidden behav
 
 ---
 
-## What `safe-timeout` does NOT do
+## What `safe-timeouts` does NOT do
 
 It is important to be explicit about limitations:
 
@@ -226,7 +226,7 @@ This matches the realities of Node.js and modern async runtimes.
 
 ## How this differs from `setTimeout`
 
-| Feature             | setTimeout | safe-timeout |
+| Feature             | setTimeout | safe-timeouts |
 | ------------------- | ---------- | ------------ |
 | End-to-end deadline | ❌          | ✅            |
 | Nested composition  | ❌          | ✅            |
@@ -234,7 +234,7 @@ This matches the realities of Node.js and modern async runtimes.
 | Context propagation | ❌          | ✅            |
 | Concurrency-safe    | ❌          | ✅            |
 
-`setTimeout` works locally. `safe-timeout` works across your entire async call graph.
+`setTimeout` works locally. `safe-timeouts` works across your entire async call graph.
 
 ---
 
@@ -264,7 +264,7 @@ instanceof TimeoutError === true
 
 ## When to use this
 
-Use `safe-timeout` when:
+Use `safe-timeouts` when:
 
 * you want request-level deadlines
 * you call multiple async services
