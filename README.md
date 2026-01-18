@@ -3,12 +3,12 @@
 **Deadline-based timeouts for async Node.js code with AbortSignal support.**
 
 ![NPM Version](https://img.shields.io/npm/v/safe-timeouts)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/yetanotheraryan/safe-timeouts)
-![GitHub Repo stars](https://img.shields.io/github/stars/yetanotheraryan/safe-timeouts)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/yetanotheraryan/safe-timeouts?style=flat-square&color=blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/yetanotheraryan/safe-timeouts)
-![GitHub License](https://img.shields.io/github/license/yetanotheraryan/safe-timeouts)
 ![GitHub contributors](https://img.shields.io/github/contributors/yetanotheraryan/safe-timeouts)
 ![GitHub forks](https://img.shields.io/github/forks/yetanotheraryan/safe-timeouts)
+![GitHub Repo stars](https://img.shields.io/github/stars/yetanotheraryan/safe-timeouts)
+![GitHub License](https://img.shields.io/github/license/yetanotheraryan/safe-timeouts)
 
 Promise-based deadline enforcement for async code in Node.js. `safe-timeout` helps you apply a **single execution deadline** across async functions, services, and external calls using standard `AbortSignal` semantics.
 
