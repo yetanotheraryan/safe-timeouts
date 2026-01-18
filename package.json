@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/yetanotheraryan/safe-timeout#readme",
   "devDependencies": {
+    "@types/node": "^25.0.9",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
