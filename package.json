@@ -1,6 +1,6 @@
 {
   "name": "safe-timeout",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Deadline-based timeouts for async code in Node.js. Enforce end-to-end execution deadlines with automatic propagation and AbortSignal support.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -13,7 +13,16 @@
     "url": "git+https://github.com/yetanotheraryan/safe-timeout.git"
   },
   "keywords": [
-    "timeouts handling"
+    "timeout",
+    "deadline",
+    "abortcontroller",
+    "abortsignal",
+    "async",
+    "nodejs",
+    "axios",
+    "fetch",
+    "structured-concurrency",
+    "async-hooks"
   ],
   "author": "Aryan Tiwari",
   "license": "MIT",
