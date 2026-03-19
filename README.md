@@ -15,6 +15,7 @@ Promise-based deadline enforcement for async code in Node.js. `safe-timeouts` he
 
 ---
 
+
 ## Why this exists
 
 In real backend systems, timeouts are **end-to-end**, not per-function:
